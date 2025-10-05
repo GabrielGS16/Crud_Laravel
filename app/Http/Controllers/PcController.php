@@ -12,17 +12,17 @@ class PcController extends Controller
      */
     public function index()
     {
-        $PCs = PC::all();
-        return view('pcs.index', compact('PCs'));
+        $pcs = pc::all();
+        return view('pcs.index', compact('pcs'));
     }
 
-    
+
     /**
      * Show the form for creating a new resource.
      */
     public function create()
     {
-        //
+        return view('pcs.create');
     }
 
     /**
@@ -30,8 +30,8 @@ class PcController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+        PC::create($request->all());
+        return redirect()->route('pcs.index');   }
 
     /**
      * Display the specified resource.
