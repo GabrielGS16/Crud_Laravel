@@ -16,6 +16,7 @@ class PcController extends Controller
         return view('pcs.index', compact('PCs'));
     }
 
+    
     /**
      * Show the form for creating a new resource.
      */
