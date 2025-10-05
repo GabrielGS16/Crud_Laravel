@@ -46,7 +46,8 @@ class PcController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $pc = PC::findOrFail($id);
+        return view('pcs.edit', compact('pc'));
     }
 
     /**
@@ -54,7 +55,9 @@ class PcController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $pc = PC::findOrFail($id);
+        $pc->update($request->all());
+        return redirect()->route('pcs.index');
     }
 
     /**

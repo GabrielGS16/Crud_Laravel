@@ -10,8 +10,9 @@
 
      <ul>
         @foreach ($pcs as $pc)
-            <li>{{ $pc->nome }} - {{ $pc->processador }}</li>
+            <li>{{ $pc->nome }} - {{ $pc->processador }} | <a href="{{ route('pcs.edit', $pc->id) }}">Edit</a></li>
         @endforeach
      </ul>
+     <a href="{{ route('pcs.create') }}">Create New PC</a>
 </body> 
-</html>
+</html> 
