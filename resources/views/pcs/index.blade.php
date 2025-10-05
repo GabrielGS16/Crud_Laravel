@@ -9,8 +9,8 @@
      <h1>PCs</h1>
 
      <ul>
-        @foreach ($PCs as $PC)
-            <li>{{ $PC->nome }} - {{ $PC->processador }}</li>
+        @foreach ($pcs as $pc)
+            <li>{{ $pc->nome }} - {{ $pc->processador }}</li>
         @endforeach
      </ul>
 </body> 

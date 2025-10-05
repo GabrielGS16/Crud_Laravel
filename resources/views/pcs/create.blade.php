@@ -15,7 +15,10 @@
 
         <label for="processador">Processador:</label>
         <input type="text" name="processador" >
-        
+
+        <label for="placa_mae">Placa mãe:</label>
+        <input type="text" name="placa_mae" >
+
         <input type="submit">
      </form>
 </body>
