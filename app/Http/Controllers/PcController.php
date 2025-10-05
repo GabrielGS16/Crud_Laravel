@@ -65,6 +65,8 @@ class PcController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $pc = PC::findOrFail($id);
+        $pc->delete();
+        return redirect()->route('pcs.index');
     }
 }

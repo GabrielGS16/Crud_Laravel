@@ -10,7 +10,13 @@
 
      <ul>
         @foreach ($pcs as $pc)
-            <li>{{ $pc->nome }} - {{ $pc->processador }} | <a href="{{ route('pcs.edit', $pc->id) }}">Edit</a></li>
+            <li>{{ $pc->nome }} - {{ $pc->processador }} | <a href="{{ route('pcs.edit', $pc->id) }}">Edit</a>
+                <form action="{{ route('pcs.destroy', $pc->id) }}" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <input type="submit" value="Delete">
+                </form>
+            </li>
         @endforeach
      </ul>
      <a href="{{ route('pcs.create') }}">Create New PC</a>
